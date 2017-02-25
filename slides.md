@@ -46,6 +46,16 @@
 
 ----------
 
+# State
+
+* Do Not Modify State Directly
+* State Updates May Be Asynchronous
+* State Updates are Merged
+* Data Flows Down
+
+----------
+
+
 # Demo 3
 
 ![presentation](https://raw.githubusercontent.com/bartw/siract/master/assets/presentation_meme.jpg)

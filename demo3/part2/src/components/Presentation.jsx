@@ -12,11 +12,11 @@ export default class Presentation extends React.Component {
     }
 
     previous() {
-        this.setState({ index: Math.max(this.state.index - 1, 0) });
+        this.setState((prevState) => ({ index: Math.max(prevState.index - 1, 0) }));
     }
 
     next() {
-        this.setState({ index: Math.min(this.state.index + 1, this.props.slides.length - 1) });
+        this.setState((prevState, props) => ({ index: Math.min(prevState.index + 1, props.slides.length - 1) }));
     }
 
     render() {

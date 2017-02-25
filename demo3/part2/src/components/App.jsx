@@ -28,13 +28,15 @@ export default class App extends React.Component {
     }
 
     add() {
-        const id = Math.max(...this.state.slides.map(slide => slide.id)) + 1;
-        const slide = { id: id, content: '# Slide ' + id };
-        this.setState({ slides: this.state.slides.concat(slide), selectedId: id });
+        this.setState((prevState, props) => {
+            const id = Math.max(...prevState.slides.map(slide => slide.id)) + 1;
+            const slide = { id: id, content: '# Slide ' + id };
+            return { slides: prevState.slides.concat(slide), selectedId: id };
+        });
     }
 
     remove() {
-        this.setState({ slides: this.state.slides.filter(slide => slide.id !== this.state.selectedId), selectedId: null });
+        this.setState((prevState) => ({ slides: prevState.slides.filter(slide => slide.id !== prevState.selectedId), selectedId: null }));
     }
 
     select(id) {
@@ -42,7 +44,7 @@ export default class App extends React.Component {
     }
 
     update(content) {
-        this.setState({ slides: this.state.slides.map(slide => slide.id === this.state.selectedId ? { ...slide, content: content } : slide) });
+        this.setState((prevState) => ({ slides: prevState.slides.map(slide => slide.id === prevState.selectedId ? { ...slide, content: content } : slide) }));
     }
 
     start() {
