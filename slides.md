@@ -43,3 +43,9 @@
 * React elements are immutable
 * React DOM compares the element to the previous one
 * React DOM only applies the DOM updates necessary
+
+----------
+
+# Demo 3
+
+![presentation](https://raw.githubusercontent.com/bartw/siract/master/assets/presentation_meme.jpg)
