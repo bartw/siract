@@ -55,7 +55,21 @@
 
 ----------
 
-
 # Demo 3
 
 ![presentation](https://raw.githubusercontent.com/bartw/siract/master/assets/presentation_meme.jpg)
+
+----------
+
+# Next steps
+
+* Testing: [Jest](https://facebook.github.io/jest/), [Enzyme](http://airbnb.io/enzyme/)
+* Routing: [React Router](https://github.com/ReactTraining/react-router), [Junctions](https://junctions.js.org/)
+* State management: [Flux](https://facebook.github.io/flux/), [Redux](http://redux.js.org/), [MobX](https://mobx.js.org/)
+* Beyond: [React Native](https://facebook.github.io/react-native/), [Electrode](http://www.electrode.io/)
+
+----------
+
+# Extra demo 4
+
+![presentation](https://raw.githubusercontent.com/bartw/siract/master/assets/router_meme.jpg)
