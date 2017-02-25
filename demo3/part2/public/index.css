@@ -92,11 +92,14 @@ button {
     box-sizing: border-box;
 }
 
-textarea {
+textarea, input {
     width: 100%;
     margin: 0;
     padding: 5px;
     box-sizing: border-box;
+}
+
+textarea {
     height: 200px;
     resize: none;
 }
@@ -126,4 +129,28 @@ textarea {
     position: fixed;
     bottom: 0;
     padding: 10px;
+}
+
+#import {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#import > div {
+    width: 50%;
+}
+
+#import > div > div {
+    margin-bottom: 10px;
 }

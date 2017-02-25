@@ -7,7 +7,7 @@ export default class Sidebar extends React.Component {
         return (
             <div id="sidebar">
                 <List slides={this.props.slides} onSelect={this.props.onSelect} />
-                <SidebarButtons onAdd={this.props.onAdd} onStart={this.props.onStart} />
+                <SidebarButtons onAdd={this.props.onAdd} onStart={this.props.onStart} onImport={this.props.onImport} />
             </div>
         );
     }
