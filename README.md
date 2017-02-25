@@ -12,4 +12,6 @@ This is the repo for an intro to react presentation.
 
 ## [Demo 2](demo2)
 
+![components](assets/components_meme.jpg)
+
 ## [Demo 3](demo3)

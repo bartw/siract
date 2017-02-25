@@ -32,6 +32,8 @@
 
 # Demo 2
 
+![components](https://raw.githubusercontent.com/bartw/siract/master/assets/components_meme.jpg)
+
 ----------
 
 # Virtual DOM
