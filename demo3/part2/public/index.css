@@ -86,7 +86,7 @@ button {
     font-size: 3rem;
 }
 
-#edit{
+#edit {
     border-top: 1px solid black;
     padding: 20px;
     box-sizing: border-box;
@@ -99,4 +99,31 @@ textarea {
     box-sizing: border-box;
     height: 200px;
     resize: none;
+}
+
+#presentation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#presentation .preview {
+    padding: 10px;
+}
+
+#presentation .preview .content {
+    font-size: 3rem;
+}
+
+#presentation-buttons {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
 }

@@ -6,12 +6,15 @@ export default class Details extends React.Component {
     render() {
         return (
             <div id="details-container">
-                <div id="details">
-                    <div id="details-preview">
-                        <Preview slide={this.props.slide} />
+                {
+                    this.props.slide &&
+                    <div id="details">
+                        <div id="details-preview">
+                            <Preview slide={this.props.slide} />
+                        </div>
+                        <Edit slide={this.props.slide} onRemove={this.props.onRemove} onUpdate={this.props.onUpdate} />
                     </div>
-                    <Edit slide={this.props.slide} />
-                </div>
+                }
             </div>
         );
     }

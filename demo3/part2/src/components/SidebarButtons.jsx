@@ -4,8 +4,8 @@ export default class SidebarButtons extends React.Component {
     render() {
         return (
             <div id="sidebar-buttons">
-                <button>Add</button>
-                <button>Start</button>
+                <button onClick={this.props.onAdd}>Add</button>
+                <button onClick={this.props.onStart}>Start</button>
             </div>
         );
     }

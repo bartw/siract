@@ -18,7 +18,7 @@ npm start
 
 ```shell
 npm init
-npm install --save-dev webpack webpack-dev-server babel-core babel-loader babel-preset-es2015 babel-preset-react
+npm install --save-dev webpack webpack-dev-server babel-core babel-loader babel-preset-es2015 babel-preset-react babel-plugin-transform-object-rest-spread
 npm install --save react react-dom showdown
 mkdir public src src\components
 touch webpack.config.js .babelrc public/index.html public/index.css src/index.js src/components/App.jsx
