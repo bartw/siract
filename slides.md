@@ -17,6 +17,8 @@
 
 # Demo 1
 
+![hello](https://raw.githubusercontent.com/bartw/siract/master/assets/hello_meme.jpg)
+
 ----------
 
 # JSX
