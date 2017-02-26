@@ -16,5 +16,13 @@ export default class Editor extends React.Component {
 Editor.propTypes = {
     content: React.PropTypes.string,
     onRemove: React.PropTypes.func.isRequired,
-    onUpdate: React.PropTypes.func.isRequired
+    onUpdate: React.PropTypes.func.isRequired,
+    slides: React.PropTypes.arrayOf(React.PropTypes.shape({
+        id: React.PropTypes.number,
+        content: React.PropTypes.string
+    })).isRequired,
+    onSelect: React.PropTypes.func.isRequired,
+    onImport: React.PropTypes.func.isRequired,
+    onAdd: React.PropTypes.func.isRequired,
+    onStart: React.PropTypes.func.isRequired
 };
