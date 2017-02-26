@@ -11,3 +11,9 @@ export default class SidebarButtons extends React.Component {
         );
     }
 }
+
+SidebarButtons.propTypes = {
+    onImport: React.PropTypes.func.isRequired,
+    onAdd: React.PropTypes.func.isRequired,
+    onStart: React.PropTypes.func.isRequired
+};
