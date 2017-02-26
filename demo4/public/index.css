@@ -1,4 +1,4 @@
-html, body, #root, #app {
+html, body, #root, #app, #editor {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -15,7 +15,7 @@ a {
     color: black;
 }
 
-#app {
+#editor {
     display: flex;
     flex-direction: row;
 }

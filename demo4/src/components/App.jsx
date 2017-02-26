@@ -1,6 +1,5 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import Details from './Details';
+import Editor from './Editor';
 import Presentation from './Presentation';
 import Import from './Import';
 
@@ -68,10 +67,10 @@ export default class App extends React.Component {
     }
 
     render() {
+        const slide = this.state.slides.find(slide => slide.id === this.state.selectedId);
         return (
             <div id="app">
-                <Sidebar slides={this.state.slides} onAdd={this.add} onSelect={this.select} onStart={this.start} onImport={this.showImport} />
-                <Details slide={this.state.slides.find(slide => slide.id === this.state.selectedId)} onRemove={this.remove} onUpdate={this.update} />
+                <Editor slides={this.state.slides} onAdd={this.add} onSelect={this.select} onStart={this.start} onImport={this.showImport} slide={slide} onRemove={this.remove} onUpdate={this.update} />
                 {this.state.showPresentation && <Presentation slides={this.state.slides} onStop={this.stop} />}
                 {this.state.showImport && <Import onImport={this.import} onHide={this.hideImport} />}
             </div>
