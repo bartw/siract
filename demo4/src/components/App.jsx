@@ -68,9 +68,10 @@ export default class App extends React.Component {
 
     render() {
         const slide = this.state.slides.find(slide => slide.id === this.state.selectedId);
+        const content = slide ? slide.content : null;
         return (
             <div id="app">
-                <Editor slides={this.state.slides} onAdd={this.add} onSelect={this.select} onStart={this.start} onImport={this.showImport} slide={slide} onRemove={this.remove} onUpdate={this.update} />
+                <Editor slides={this.state.slides} onAdd={this.add} onSelect={this.select} onStart={this.start} onImport={this.showImport} content={content} onRemove={this.remove} onUpdate={this.update} />
                 {this.state.showPresentation && <Presentation slides={this.state.slides} onStop={this.stop} />}
                 {this.state.showImport && <Import onImport={this.import} onHide={this.hideImport} />}
             </div>

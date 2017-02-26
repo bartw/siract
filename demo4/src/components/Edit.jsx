@@ -27,5 +27,6 @@ export default class Edit extends React.Component {
 
 Edit.propTypes = {
     content: React.PropTypes.string.isRequired,
-    onRemove: React.PropTypes.func.isRequired
+    onRemove: React.PropTypes.func.isRequired,
+    onUpdate: React.PropTypes.func.isRequired
 };

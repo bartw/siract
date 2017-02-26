@@ -7,8 +7,14 @@ export default class Editor extends React.Component {
         return (
             <div id="editor">
                 <Sidebar slides={this.props.slides} onAdd={this.props.onAdd} onSelect={this.props.onSelect} onStart={this.props.onStart} onImport={this.props.onImport} />
-                <Details slide={this.props.slide} onRemove={this.props.onRemove} onUpdate={this.props.onUpdate} />
+                {this.props.content && <Details content={this.props.content} onRemove={this.props.onRemove} onUpdate={this.props.onUpdate} />}
             </div>
         );
     }
 }
+
+Editor.propTypes = {
+    content: React.PropTypes.string,
+    onRemove: React.PropTypes.func.isRequired,
+    onUpdate: React.PropTypes.func.isRequired
+};
