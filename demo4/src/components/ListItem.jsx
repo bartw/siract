@@ -15,7 +15,7 @@ export default class ListItem extends React.Component {
     render() {
         return (
             <li className="list-item" onClick={this.click}>
-                <Preview slide={this.props.slide} />
+                <Preview content={this.props.slide.content} />
             </li>
         );
     }

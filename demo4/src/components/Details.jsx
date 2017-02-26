@@ -10,7 +10,7 @@ export default class Details extends React.Component {
                     this.props.slide &&
                     <div id="details">
                         <div id="details-preview">
-                            <Preview slide={this.props.slide} />
+                            <Preview content={this.props.slide.content} />
                         </div>
                         <Edit slide={this.props.slide} onRemove={this.props.onRemove} onUpdate={this.props.onUpdate} />
                     </div>

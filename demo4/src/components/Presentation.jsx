@@ -22,7 +22,7 @@ export default class Presentation extends React.Component {
     render() {
         return (
             <div id="presentation">
-                {this.props.slides.length && <Preview slide={this.props.slides[this.state.index]} />}
+                {this.props.slides.length && <Preview content={this.props.slides[this.state.index].content} />}
                 <div id="presentation-buttons">
                     <button onClick={this.previous}>Previous</button>
                     <button onClick={this.next}>Next</button>

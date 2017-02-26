@@ -15,11 +15,15 @@ export default class Preview extends React.Component {
         this.converter = new showdown.Converter({ extensions: ['targetlink'] });
     }
     render() {
-        const slideHtml = { __html: this.converter.makeHtml(this.props.slide.content) };
+        const htmlContent = { __html: this.converter.makeHtml(this.props.content) };
         return (
             <div className="preview">
-                <div className="content" dangerouslySetInnerHTML={slideHtml} />
+                <div className="content" dangerouslySetInnerHTML={htmlContent} />
             </div>
         );
     }
 }
+
+Preview.propTypes = {
+    content: React.PropTypes.string.isRequired
+};
