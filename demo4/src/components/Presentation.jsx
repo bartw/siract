@@ -32,3 +32,11 @@ export default class Presentation extends React.Component {
         );
     }
 }
+
+Presentation.propTypes = {
+    slides: React.PropTypes.arrayOf(React.PropTypes.shape({
+        id: React.PropTypes.number,
+        content: React.PropTypes.string
+    })).isRequired,
+    onStop: React.PropTypes.func.isRequired
+};
