@@ -27,7 +27,7 @@ export default class App extends React.Component {
     }
 
     add() {
-        this.setState((prevState, props) => {
+        this.setState((prevState) => {
             const id = Math.max(...prevState.slides.map(slide => slide.id)) + 1;
             const slide = { id: id, content: '# Slide ' + id };
             return { slides: prevState.slides.concat(slide), selectedId: id };
