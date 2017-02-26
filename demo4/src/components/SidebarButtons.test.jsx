@@ -1,11 +1,11 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { shallow } from 'enzyme';
 import SidebarButtons from './SidebarButtons';
 
 it('renders without crashing', () => {
     const onImport = () => {};
     const onAdd = () => {};
     const onStart = () => {};
-    const div = document.createElement('div');
-    render(<SidebarButtons onImport={onImport} onAdd={onAdd} onStart={onStart} />, div);
+    const component = shallow(<SidebarButtons onImport={onImport} onAdd={onAdd} onStart={onStart} />);
+    expect(component.length).toBe(1);
 });

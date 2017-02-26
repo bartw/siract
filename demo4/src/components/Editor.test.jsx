@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { shallow } from 'enzyme';
 import Editor from './Editor';
 
 it('renders without crashing', () => {
@@ -9,6 +9,6 @@ it('renders without crashing', () => {
     const onImport = () => {};
     const onAdd = () => {};
     const onStart = () => {};
-    const div = document.createElement('div');
-    render(<Editor slides={[]} onSelect={onSelect} onRemove={onRemove} onUpdate={onUpdate} onImport={onImport} onAdd={onAdd} onStart={onStart} />, div);
+    const component = shallow(<Editor slides={[]} onSelect={onSelect} onRemove={onRemove} onUpdate={onUpdate} onImport={onImport} onAdd={onAdd} onStart={onStart} />);
+    expect(component.length).toBe(1);
 });

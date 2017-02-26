@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { shallow } from 'enzyme';
 import Sidebar from './Sidebar';
 
 it('renders without crashing', () => {
@@ -7,6 +7,6 @@ it('renders without crashing', () => {
     const onImport = () => {};
     const onAdd = () => {};
     const onStart = () => {};
-    const div = document.createElement('div');
-    render(<Sidebar slides={[]} onSelect={onSelect} onImport={onImport} onAdd={onAdd} onStart={onStart} />, div);
+    const component = shallow(<Sidebar slides={[]} onSelect={onSelect} onImport={onImport} onAdd={onAdd} onStart={onStart} />);
+    expect(component.length).toBe(1);
 });

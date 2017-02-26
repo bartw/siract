@@ -1,10 +1,10 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { shallow } from 'enzyme';
 import Edit from './Edit';
 
 it('renders without crashing', () => {
     const onRemove = () => {};
     const onUpdate = () => {};
-    const div = document.createElement('div');
-    render(<Edit content="" onRemove={onRemove} onUpdate={onUpdate} />, div);
+    const component = shallow(<Edit content="" onRemove={onRemove} onUpdate={onUpdate} />);
+    expect(component.length).toBe(1);
 });

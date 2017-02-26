@@ -19,7 +19,9 @@ npm test
 
 ```shell
 npm init
-npm install --save-dev webpack webpack-dev-server babel-core babel-loader babel-preset-es2015 babel-preset-react babel-plugin-transform-object-rest-spread jest babel-jest
+npm install --save-dev webpack webpack-dev-server babel-loader
+npm install --save-dev babel-core babel-preset-es2015 babel-preset-react babel-plugin-transform-object-rest-spread babel-jest
+npm install --save-dev react-addons-test-utils jest enzyme
 npm install --save react react-dom showdown
 mkdir public src src\components
 touch webpack.config.js .babelrc public/index.html public/index.css src/index.js src/components/App.jsx

@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { shallow } from 'enzyme';
 import List from './List';
 
 it('renders without crashing', () => {
     const onSelect = () => {};
-    const div = document.createElement('div');
-    render(<List slides={[]} onSelect={onSelect} />, div);
+    const component = shallow(<List slides={[]} onSelect={onSelect} />);
+    expect(component.length).toBe(1);
 });

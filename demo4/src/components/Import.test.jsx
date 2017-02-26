@@ -1,10 +1,10 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { shallow } from 'enzyme';
 import Import from './Import';
 
 it('renders without crashing', () => {
     const onImport = () => {};
     const onHide = () => {};
-    const div = document.createElement('div');
-    render(<Import onImport={onImport} onHide={onHide} />, div);
+    const component = shallow(<Import onImport={onImport} onHide={onHide} />);
+    expect(component.length).toBe(1);
 });

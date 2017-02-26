@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { shallow } from 'enzyme';
 import Preview from './Preview';
 
 it('renders without crashing', () => {
-    const div = document.createElement('div');
-    render(<Preview content="" />, div);
+    const component = shallow(<Preview content="" />);
+    expect(component.length).toBe(1);
 });
