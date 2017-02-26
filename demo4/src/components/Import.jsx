@@ -55,3 +55,8 @@ export default class Import extends React.Component {
         );
     }
 }
+
+Import.propTypes = {
+    onImport: React.PropTypes.func.isRequired,
+    onHide: React.PropTypes.func.isRequired
+};
