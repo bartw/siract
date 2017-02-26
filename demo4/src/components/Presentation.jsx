@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from '../models/Slide';
 import Preview from './Preview';
 
 export default class Presentation extends React.Component {
@@ -22,7 +23,7 @@ export default class Presentation extends React.Component {
     render() {
         return (
             <div id="presentation">
-                {this.props.slides.length && <Preview content={this.props.slides[this.state.index].content} />}
+                {this.props.slides.length > 0 && <Preview content={this.props.slides[this.state.index].content} />}
                 <div id="presentation-buttons">
                     <button onClick={this.previous}>Previous</button>
                     <button onClick={this.next}>Next</button>
@@ -34,9 +35,6 @@ export default class Presentation extends React.Component {
 }
 
 Presentation.propTypes = {
-    slides: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.number,
-        content: React.PropTypes.string
-    })).isRequired,
+    slides: React.PropTypes.arrayOf(React.PropTypes.instanceOf(Slide)).isRequired,
     onStop: React.PropTypes.func.isRequired
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from '../models/Slide';
 import Sidebar from './Sidebar';
 import Details from './Details';
 
@@ -17,10 +18,7 @@ Editor.propTypes = {
     content: React.PropTypes.string,
     onRemove: React.PropTypes.func.isRequired,
     onUpdate: React.PropTypes.func.isRequired,
-    slides: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.number,
-        content: React.PropTypes.string
-    })).isRequired,
+    slides: React.PropTypes.arrayOf(React.PropTypes.instanceOf(Slide)).isRequired,
     onSelect: React.PropTypes.func.isRequired,
     onImport: React.PropTypes.func.isRequired,
     onAdd: React.PropTypes.func.isRequired,

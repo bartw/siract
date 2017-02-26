@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from '../models/Slide';
 import Editor from './Editor';
 import Presentation from './Presentation';
 import Import from './Import';
@@ -7,10 +8,7 @@ export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            slides: [
-                { id: 1, content: '# Slide 1' },
-                { id: 2, content: '# Slide 2' }
-            ],
+            slides: [new Slide()],
             selectedId: 1,
             showPresentation: false,
             showImport: false
@@ -28,9 +26,8 @@ export default class App extends React.Component {
 
     add() {
         this.setState((prevState) => {
-            const id = prevState.slides && prevState.slides.length ? Math.max(...prevState.slides.map(slide => slide.id)) + 1 : 1;
-            const slide = { id: id, content: '# Slide ' + id };
-            return { slides: prevState.slides.concat(slide), selectedId: id };
+            const slide = new Slide();
+            return { slides: prevState.slides.concat(slide), selectedId: slide._id };
         });
     }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from '../models/Slide';
 import ListItem from './ListItem';
 
 export default class List extends React.Component {
@@ -15,9 +16,6 @@ export default class List extends React.Component {
 }
 
 List.propTypes = {
-    slides: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.number,
-        content: React.PropTypes.string
-    })).isRequired,
+    slides: React.PropTypes.arrayOf(React.PropTypes.instanceOf(Slide)).isRequired,
     onSelect: React.PropTypes.func.isRequired
 };

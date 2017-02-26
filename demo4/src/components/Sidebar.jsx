@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from '../models/Slide';
 import List from './List';
 import SidebarButtons from './SidebarButtons';
 
@@ -14,10 +15,7 @@ export default class Sidebar extends React.Component {
 }
 
 Sidebar.propTypes = {
-    slides: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.number,
-        content: React.PropTypes.string
-    })).isRequired,
+    slides: React.PropTypes.arrayOf(React.PropTypes.instanceOf(Slide)).isRequired,
     onSelect: React.PropTypes.func.isRequired,
     onImport: React.PropTypes.func.isRequired,
     onAdd: React.PropTypes.func.isRequired,
