@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from '../models/Slide';
 
 export default class Import extends React.Component {
     constructor(props) {
@@ -27,8 +28,12 @@ export default class Import extends React.Component {
                 throw new Error();
             })
             .then(text => {
-                const rawSlides = text.split('\n\n----------\n\n');
-                const slides = rawSlides.map((slide, index) => ({ id: index + 1, content: slide }));
+                const rawContent = text.split('\n\n----------\n\n');
+                const slides = rawContent.map((content) => {
+                    const slide = new Slide();
+                    slide.content = content;
+                    return slide;
+                });
                 this.props.onImport(slides);
             })
             .catch(() => {
