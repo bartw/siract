@@ -20,3 +20,11 @@ export default class ListItem extends React.Component {
         );
     }
 }
+
+ListItem.propTypes = {
+    slide: React.PropTypes.shape({
+        id: React.PropTypes.number,
+        content: React.PropTypes.string
+    }).isRequired,
+    onSelect: React.PropTypes.func.isRequired
+};
