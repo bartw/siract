@@ -12,7 +12,7 @@ export default class Details extends React.Component {
                         <div id="details-preview">
                             <Preview content={this.props.slide.content} />
                         </div>
-                        <Edit slide={this.props.slide} onRemove={this.props.onRemove} onUpdate={this.props.onUpdate} />
+                        <Edit content={this.props.slide.content} onRemove={this.props.onRemove} onUpdate={this.props.onUpdate} />
                     </div>
                 }
             </div>

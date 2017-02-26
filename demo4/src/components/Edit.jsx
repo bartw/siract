@@ -15,7 +15,7 @@ export default class Edit extends React.Component {
         return (
             <div id="edit">
                 <div>
-                    <textarea placeholder="Content" value={this.props.slide.content} onChange={this.change} />
+                    <textarea placeholder="Content" value={this.props.content} onChange={this.change} />
                 </div>
                 <div>
                     <button onClick={this.props.onRemove}>Remove</button>
@@ -24,3 +24,8 @@ export default class Edit extends React.Component {
         );
     }
 }
+
+Edit.propTypes = {
+    content: React.PropTypes.string.isRequired,
+    onRemove: React.PropTypes.func.isRequired
+};
